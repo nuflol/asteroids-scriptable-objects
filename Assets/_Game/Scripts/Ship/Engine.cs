@@ -1,3 +1,5 @@
+using System;
+using DefaultNamespace.ScriptableEvents;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using Variables;
@@ -12,6 +14,9 @@ namespace Ship
         
         [SerializeField] private float _throttlePowerSimple;
         [SerializeField] private float _rotationPowerSimple;
+
+        [SerializeField] private ScriptableEventInt speedBuffEvent;
+        [SerializeField] private float speedMultiplier = 1f;
 
         private Rigidbody2D _rigidbody;
         
@@ -35,11 +40,17 @@ namespace Ship
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
+            //speedBuffEvent.Register(boostSpeed);
+        }
+
+        public void boostSpeed(int boostAmmount)
+        {
+            speedMultiplier = 1 + ((float)boostAmmount * 0.1f);
         }
     
         public void Throttle()
         {
-            _rigidbody.AddForce(transform.up * _throttlePower.Value, ForceMode2D.Force);
+            _rigidbody.AddForce(transform.up * (_throttlePower.Value * speedMultiplier), ForceMode2D.Force);
         }
 
         public void SteerLeft()

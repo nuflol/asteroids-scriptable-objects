@@ -123,6 +123,129 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &260795682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 260795685}
+  - component: {fileID: 260795684}
+  - component: {fileID: 260795683}
+  m_Layer: 0
+  m_Name: PowerUpSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &260795683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260795682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a90ed912bd814ea090abb33cbfece889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 1f3491af5776f4f4ea353aa5d92092f4, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 260795684}
+        m_TargetAssemblyTypeName: PowerUpSpawner, Assembly-CSharp
+        m_MethodName: spawnPowerUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &260795684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260795682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d26e4c027386d4e934a739f982cd7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnAsteroidDestroyedPos: {fileID: 11400000, guid: 1f3491af5776f4f4ea353aa5d92092f4, type: 2}
+  powerUp: {fileID: 4736818886791047246, guid: 822890cfb0477bc48a86317627629f70, type: 3}
+--- !u!4 &260795685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260795682}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.40343, y: -65.73578, z: -6.6484694}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &608719475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2970632031999273636, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
+  m_PrefabInstance: {fileID: 2970632032457142644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &608719479 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2970632031999273638, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
+  m_PrefabInstance: {fileID: 2970632032457142644}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608719475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ca54af3d6ff174994b183b53e8dc92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &608719481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608719475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b8f09ae7c24da19a15cb1b403ad85b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventNoPayload: {fileID: 0}
+  _responseNoPayload:
+    m_PersistentCalls:
+      m_Calls: []
+  _event: {fileID: 11400000, guid: 75453c0dfe0c33f488b801d439dc77b9, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 608719479}
+        m_TargetAssemblyTypeName: Ship.Engine, Assembly-CSharp
+        m_MethodName: boostSpeed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +325,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -250,6 +374,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -268,6 +393,10 @@ PrefabInstance:
     - target: {fileID: 2970632031999273636, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
       propertyPath: m_Name
       value: Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970632031999273636, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2970632031999273637, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
       propertyPath: m_RootOrder
@@ -314,6 +443,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2970632031999273638, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
+      propertyPath: speedBuffEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 75453c0dfe0c33f488b801d439dc77b9, type: 2}
+    - target: {fileID: 2970632031999273638, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
+      propertyPath: speedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970632031999273638, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
       propertyPath: _rotationPowerSimple
       value: 5.85
       objectReference: {fileID: 0}
@@ -348,6 +485,10 @@ PrefabInstance:
     - target: {fileID: 2970632031999273639, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
       value: 1.2715299
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970632032652603877, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}

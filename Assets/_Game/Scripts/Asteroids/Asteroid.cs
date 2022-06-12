@@ -1,3 +1,4 @@
+using DefaultNamespace.GameEvents;
 using DefaultNamespace.ScriptableEvents;
 using UnityEngine;
 using Variables;
@@ -9,6 +10,7 @@ namespace Asteroids
     public class Asteroid : MonoBehaviour
     {
         [SerializeField] private ScriptableEventInt _onAsteroidDestroyed;
+        [SerializeField] private GameEventVector3 _onDestroyed;
         
         [Header("Config:")]
         [SerializeField] private float _minForce;
@@ -46,6 +48,7 @@ namespace Asteroids
 
         private void HitByLaser()
         {
+            _onDestroyed.Raise(transform.position);
             _onAsteroidDestroyed.Raise(_instanceId);
             Destroy(gameObject);
         }
